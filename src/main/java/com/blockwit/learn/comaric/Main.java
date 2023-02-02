@@ -1,3 +1,5 @@
+package com.blockwit.learn.comaric;
+
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
