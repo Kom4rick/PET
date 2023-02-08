@@ -24,12 +24,18 @@ public class Main {
 
         System.out.println(response1.body());
 
-        String b[] = new String[0];
-        ArrayList a = new ArrayList(b);
+        ArrayList a = new ArrayList();
         a.add("pf");
         a.add("13");
         a.add("asd");
-        System.out.println(a.getElement(2));
+        a.add("asd");
+        a.add("asd");
+        a.add("asd");
+        a.add("asd");
+        a.add("asd");
+        a.add("asd1");
+        a.add("asd2");
+        System.out.println(a.getElement(9));
 
     }
 
