@@ -23,20 +23,30 @@ public class Main {
         HttpResponse<String> response1 = client.send(request1, HttpResponse.BodyHandlers.ofString());
 
         System.out.println(response1.body());
-
+//        long startTime = System.currentTimeMillis();
         ArrayList a = new ArrayList();
-        a.add("pf");
-        a.add("13");
-        a.add("asd");
-        a.add("asd");
-        a.add("asd");
-        a.add("asd");
-        a.add("asd");
-        a.add("asd");
-        a.add("asd1");
-        a.add("asd2");
-        System.out.println(a.getElement(9));
+//        for (int i = 0; i < 1_000_000; i++) {
+//            a.add("");
+//        }
+//        long finishTime = System.currentTimeMillis();
+//        System.out.println( finishTime-startTime );
+//        System.out.println("end");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("");
+        a.add("123");
+        System.out.println(a.getElement(11));
 
     }
+
+
 
 }
