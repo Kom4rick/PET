@@ -9,7 +9,7 @@ public class ArrayList {
     public void add(String element) {
 
         if ((temp.length == size)) {
-            String[] temp1 = Arrays.copyOf(temp, temp.length + 1);
+            String[] temp1 = Arrays.copyOf(temp, temp.length + 100);
             temp = new String[temp1.length];
             temp = temp1;
             temp[temp.length - 1] = element;
