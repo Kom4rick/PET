@@ -3,8 +3,8 @@ package com.blockwit.learn.comaric;
 import java.util.Arrays;
 
 public class Map {
-    int numbers [] = new int[1];
-    String names [] = new String[1];
+    int numbers [] = new int[10];
+    String names [] = new String[10];
     private int size = 0;
 
     public void add (String element){
@@ -13,7 +13,7 @@ public class Map {
         }
 
         if (numbers.length == size) {
-            int [] temp1 = Arrays.copyOf(numbers, numbers.length + 1);
+            int [] temp1 = Arrays.copyOf(numbers, numbers.length + 10);
             numbers = new int[temp1.length];
             numbers = temp1;
             for (int i = 0; i < numbers.length; i++) {
@@ -21,7 +21,7 @@ public class Map {
             }
         }
         if (names.length == size) {
-            String[] temp1 = Arrays.copyOf(names, names.length + 1);
+            String[] temp1 = Arrays.copyOf(names, names.length + 10);
             names = new String[temp1.length];
             names = temp1;
             names[names.length - 1] = element;
