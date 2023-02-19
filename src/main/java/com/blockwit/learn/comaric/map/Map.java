@@ -3,41 +3,44 @@ package com.blockwit.learn.comaric.map;
 import java.util.Arrays;
 
 public class Map {
-	private int numbers[] = new int[10];
-	private String names[] = new String[10];
+	private int numbers[] = new int[1];
+	private String names[] = new String[1];
 	private int size = 0;
 
-	public void add(String element) {
+	public void add(int number, String element) {
 		for (int i = 0; i < numbers.length; i++) {
-			numbers[i] = i + 1;
-		}
-
-		if (numbers.length == size) {
-			int[] temp1 = Arrays.copyOf(numbers, numbers.length + 10);
-			numbers = new int[temp1.length];
-			numbers = temp1;
-			for (int i = 0; i < numbers.length; i++) {
-				numbers[i] = i + 1;
+			if (numbers[i] == number){
+				names[i] = element;
 			}
 		}
+		if (numbers.length == size) {
+			numbers = Arrays.copyOf(numbers, numbers.length + 10);
+		}
 		if (names.length == size) {
-			String[] temp1 = Arrays.copyOf(names, names.length + 10);
-			names = new String[temp1.length];
-			names = temp1;
+			names = Arrays.copyOf(names, names.length + 10);
 			names[names.length - 1] = element;
 		}
+		numbers[size] = number;
 		names[size] = element;
 		size++;
 	}
 
-	public String getElement(int number) {
+	public String get(int number) {
 		String s = null;
 		for (int i = 0; i < numbers.length; i++) {
-			if (number == numbers[i]) {
-				return s = names[i + 1];
+			if (number == numbers[i]){
+				return names[i];
 			}
 		}
 		return s;
+	}
+	public void remove(int number){
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] == number){
+				numbers[i] = 0;
+				names[i] = null;
+			}
+		}
 	}
 }
 
