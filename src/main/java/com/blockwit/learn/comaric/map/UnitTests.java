@@ -19,7 +19,7 @@ public class UnitTests {
 		System.out.println(abc.get(456));
 		abc.add(456, "o5 masha");
 		System.out.println(abc.get(456));
-		//abc.remove(666);
+		abc.remove(666);
 		System.out.println(abc.get(666));
 
 	}

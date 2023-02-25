@@ -40,7 +40,6 @@ public class Map {
 		return s;
 	}
 	public void remove(int index){
-
 		for (int i = 0; i < numbers.length; i++) {
 			if (numbers[i] == index){
 				numbers[i] = 0;
@@ -64,9 +63,10 @@ public class Map {
 					numbers[j+i] = numbers2[j];
 				}
 				size--;
-				break;
+				return;
 			}
 		}
+		System.out.println("Заданного элемента не существует");
 
 	}
 }
