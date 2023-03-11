@@ -1,26 +1,34 @@
 package com.blockwit.learn.comaric.map;
 
-import java.io.IOException;
-
 public class UnitTests {
 
-	public static void main(String[] args) throws IOException, InterruptedException {
+	public static void main(String[] args) throws Exception {
+		test_singleAdd();
+		test_singleRemove();
+		test_performance();
+	}
 
+	public static void test_performance() {
+		Map map = new Map();
+		long startTime = System.currentTimeMillis();
+		for (int i = 0; i < 400000; i++) {
+			map.add(i + "skjhddhidhihdhdhdhkdhkjdhkhd", i + "");
+		}
+		long endTime = System.currentTimeMillis();
+		System.out.println("Finished: " + (endTime - startTime));
+	}
+
+	public static void test_singleAdd() throws Exception {
 		Map abc = new Map();
-		abc.add(123, "serega");
-		abc.add(324, "tolik");
-		abc.add(456, "masha");
-		abc.add(678, "nikita");
-		System.out.println(abc.get(324));
-		abc.add(324, "TOLIK");
-		abc.add(111,"dima");
-		abc.remove(456);
-		System.out.println(abc.get(324));
-		System.out.println(abc.get(456));
-		abc.add(456, "o5 masha");
-		System.out.println(abc.get(456));
-		abc.remove(666);
-		System.out.println(abc.get(666));
+		String testKey = "324";
+		String testValue = "tolik90898989";
+		abc.add(testKey, testValue);
+		if (!abc.get(testKey).equals(testValue)) {
+			throw new Exception("Something went wrong");
+		}
+	}
+
+	public static void test_singleRemove() {
 
 	}
 
