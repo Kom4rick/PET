@@ -26,6 +26,27 @@ public class ArrayList {
 	public String get(int index) {
 		return temp[index];
 	}
+	public void insert (int index, String element ){
+		if (index > size){
+			throw new ArrayIndexOutOfBoundsException();
+		}
+		for (int i = 0; i < temp.length; i++) {
+			if (i == index){
+				String[] tmp = Arrays.copyOfRange(temp, 0, i);
+				String[] tmp1 = Arrays.copyOfRange(temp, i+1, temp.length);
+				temp[i] = element;
+				for (int j = 0; j < tmp.length; j++) {
+					temp[j] = tmp[j];
+				}
+				for (int j = 0; j < tmp1.length; j++) {
+					temp[j+i+1] = tmp1[j];
+				}
+			}
+		}
+	}
+	public int size(){
+		return size;
+	}
 
 
 }

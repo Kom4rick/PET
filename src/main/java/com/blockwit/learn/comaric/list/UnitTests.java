@@ -6,6 +6,7 @@ public class UnitTests {
 		test_add();
 		test_get();
 		test_addAndGetSequence();
+		test_insert();
 	}
 
 	public static void test_add() {
@@ -32,6 +33,16 @@ public class UnitTests {
 			throw new Exception("Something went wrong");
 		}
 		if (!list.get(1).equals(checkString2)) {
+			throw new Exception("Something went wrong");
+		}
+	}
+	public static void test_insert() throws Exception {
+		ArrayList abc = new ArrayList();
+		String checkString = "Privet";
+		String checkString2= "Poka";
+		abc.add(checkString);
+		abc.insert(0, checkString2);
+		if (!abc.get(0).equals(checkString2)){
 			throw new Exception("Something went wrong");
 		}
 	}

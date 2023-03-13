@@ -42,9 +42,10 @@ public class Map {
 		return s;
 	}
 
-	public void remove(int index) {
+	public void remove(String key) {
+		int hash = key.hashCode();
 		for (int i = 0; i < numbers.length; i++) {
-			if (numbers[i] == index) {
+			if (numbers[i] == hash) {
 				numbers[i] = 0;
 				names[i] = null;
 				String[] names1 = Arrays.copyOfRange(names, 0, i);

@@ -1,11 +1,15 @@
 package com.blockwit.learn.comaric.map;
 
+import com.blockwit.learn.comaric.list.ArrayList;
+
 public class UnitTests {
 
 	public static void main(String[] args) throws Exception {
 		test_singleAdd();
 		test_singleRemove();
 		test_performance();
+		test_singleRemove();
+
 	}
 
 	public static void test_performance() {
@@ -28,8 +32,19 @@ public class UnitTests {
 		}
 	}
 
-	public static void test_singleRemove() {
-
+	public static void test_singleRemove() throws Exception {
+			Map abc = new Map();
+			String testKey = "1";
+			String testValue = "jora";
+			abc.add(testKey,testValue);
+			abc.remove((testKey));
+		if (abc.get(testKey).equals(testKey)){
+			throw new Exception("Something went wrong");
+		}
 	}
+
+
+
+
 
 }
